@@ -272,23 +272,23 @@ Console.WriteLine("// Uso de GroupBy 2 - Linq \n\n");
 
 
 // Uso de dos fuentes de datos:
-Console.WriteLine("Uso de dos fuentes de datos:: \n");
+//Console.WriteLine("Uso de dos fuentes de datos:: \n");
 
-// Print all office with 'EsHabilitado' = 1
+//// Print all office with 'EsHabilitado' = 1
 Console.WriteLine("Print all office with 'EsHabilitado' = 1");
-Oficinas
+var oficinasList = Oficinas
         .Where(o => o.EsHabilitado == 1)
         .Select(o => new
         {
             ID = o.ID,
             NombreOficina = o.Nombre,
-            TotMovimientos = AsignacionesOficina                                
-                                .Where(a => a.OficinaID == o.ID)                                
+            TotMovimientos = AsignacionesOficina
+                                .Where(a => a.OficinaID == o.ID)
                                 .Count(),
             UltimoMovimiento = AsignacionesOficina
                                 //.Where(a => a.OficinaID == o.ID || (o.ID == null && a.OficinaID == null))
                                 //.Where(object.Equals(AsignacionesOficina.OficinaID, Oficinas.Id)
-                                
+
                                 //.Where(a => 
                                 //{
                                 //    if (o.ID != a.OficinaID)
@@ -303,20 +303,32 @@ Oficinas
                                 //        o.ID = o.ID;
                                 //    } else
                                 //    {
-                                //        o.ID = 1;                                        
+                                //        o.ID = 1;                                      
                                 //    }
-
                                 //    return true;
                                 //})
+                                .Where(a => a.OficinaID == o.ID)
                                 .OrderByDescending(a => a.ID)
-                                .GroupBy(a => a.OficinaID)
-                                .Take(1)
                                 .FirstOrDefault()
-        })        
-        .ToList()
-        .ForEach(item => Console.WriteLine($"\n{item.ID} : " +
-        $"{item.NombreOficina} : {item.TotMovimientos} : " +
-        $"{item.UltimoMovimiento.Key }"));
+        })
+        .ToList();
+
+foreach (var item in oficinasList)
+{
+    if (item.UltimoMovimiento == null)
+    {
+        Console.WriteLine($"\n{item.ID} : " +
+    $"{item.NombreOficina} : {item.TotMovimientos} :::: " +
+    $"{item.UltimoMovimiento } ::::");
+    } else
+    {
+        Console.WriteLine($"\n{item.ID} : " +
+    $"{item.NombreOficina} : {item.TotMovimientos} :::: " +
+    $"{item.UltimoMovimiento.Movimiento } ::::");
+    }
+
+}
+
 
 
 
@@ -327,12 +339,19 @@ Console.WriteLine("\nPrint one value from AsignacionesOficina\n");
 
 // Obtengo el objeto con sus propiedades para tomar la propiedad necesaria
 var res = AsignacionesOficina
-    .Where(a => a.OficinaID == 2)
+    .Where(a => a.OficinaID == 4)
     .OrderByDescending(a => a.ID)
-    .Take(1)
-    .FirstOrDefault();
+    .Select(a => a.Movimiento);    
 
-Console.WriteLine($"\n* {res.Movimiento} *\n\n");
+if (res == null)
+{
+    Console.WriteLine($"\n*** NULL *** {res} ***\n\n");
+} else
+{
+    Console.WriteLine($"\n*** NO NULL *** {res.ToString()} ***\n\n");
+}
+
+
 
 //foreach (var item in res)
 //{
