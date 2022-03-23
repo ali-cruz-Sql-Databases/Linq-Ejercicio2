@@ -1,0 +1,4 @@
+[{"Id":1,"EsHabilitado":1,"DepartamentosID":4,"SecretariasID":2,"Nombre":"Almacen General","Ubicacion":"Sotano del edificio principal.","FechaAlta":"2022-03-20T11:06:21","FechaActualizacion":"2022-03-20T11:06:21"},
+{"Id":2,"EsHabilitado":1,"DepartamentosID":3,"SecretariasID":2,"Nombre":"Oficina Catastro 1B","Ubicacion":"Edificio principal Planta baja, area de sotano","FechaAlta":"2022-03-20T11:06:21","FechaActualizacion":"2022-03-20T11:06:21"},
+{"Id":3,"EsHabilitado":1,"DepartamentosID":1,"SecretariasID":2,"Nombre":"Oficina 3C","Ubicacion":"Edificio Norte Piso 1, area de contraloria","FechaAlta":"2022-03-20T11:06:21","FechaActualizacion":"2022-03-20T11:06:21"},
+{"Id":4,"EsHabilitado":1,"DepartamentosID":2,"SecretariasID":1,"Nombre":"Oficina 1B","Ubicacion":"Edificio Sur Piso 3, area finanzas","FechaAlta":"2022-03-20T11:06:21","FechaActualizacion":"2022-03-20T11:06:21"}]

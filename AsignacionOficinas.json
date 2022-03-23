@@ -1,0 +1,8 @@
+[{"Id":1,"UsuariosID":3,"OficinasID":3,"Movimiento":0,"AutorID":2,"FechaAlta":"2022-03-20T11:06:21"},
+{"Id":3,"UsuariosID":1,"OficinasID":2,"Movimiento":0,"AutorID":1,"FechaAlta":"2022-03-20T11:06:21"},
+{"Id":6,"UsuariosID":1,"OficinasID":4,"Movimiento":0,"AutorID":1,"FechaAlta":"2022-03-20T11:06:21"},
+{"Id":8,"UsuariosID":1,"OficinasID":4,"Movimiento":1,"AutorID":1,"FechaAlta":"2022-03-20T11:06:21"},
+{"Id":9,"UsuariosID":1,"OficinasID":2,"Movimiento":1,"AutorID":1,"FechaAlta":"2022-03-20T11:06:21"},
+{"Id":10,"UsuariosID":1,"OficinasID":4,"Movimiento":0,"AutorID":1,"FechaAlta":"2022-03-20T11:06:21"},
+{"Id":11,"UsuariosID":1,"OficinasID":2,"Movimiento":0,"AutorID":1,"FechaAlta":"2022-03-20T11:06:21"},
+{"Id":12,"UsuariosID":1,"OficinasID":4,"Movimiento":2,"AutorID":1,"FechaAlta":"2022-03-20T11:06:21"}]
